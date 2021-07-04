@@ -1,3 +1,5 @@
+import TheCafeDbSource from '../../data/thecafedb-source';
+
 const CafeCatalogue = {
   async render() {
     return `
@@ -6,7 +8,10 @@ const CafeCatalogue = {
   },
 
   async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
+    const cafes = await TheCafeDbSource.Home();
+    console.log(cafes);
+
+    // TODO: tampilkan movies di dalam DOM
   },
 };
 

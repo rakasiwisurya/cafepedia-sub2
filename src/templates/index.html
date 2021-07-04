@@ -6,10 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Free cafe catalogue for you">
-  <link rel="icon" href="favicon.png">
+  <meta name="theme-color" content="#6f7064" />
+  <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="/icon/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
-  <link rel="shortcut icon" href="/icon/favicon.ico" type="image/x-icon" />
+  <script src="https://use.fontawesome.com/b070c8f1df.js"></script>
   <title>Cafepedia - Cafe Catalogue</title>
 </head>
 
@@ -28,8 +31,8 @@
 
       <nav id="drawer" class="nav">
         <ul class="nav__list">
-          <li class="nav__item"><a href="/">Home</a></li>
-          <li class="nav__item"><a href="#">Favorite</a></li>
+          <li class="nav__item"><a href="#/cafe-catalogue">Home</a></li>
+          <li class="nav__item"><a href="#/favorite">Favorite</a></li>
           <li class="nav__item">
             <a href="https://github.com/rakasiwisurya">About Us</a>
           </li>
@@ -52,11 +55,12 @@
   </div>
 
   <main id="maincontent">
-    <!-- <section class="content">
+    <section class="content">
       <div class="latest">
         <h1 class="latest__label" tabindex="0">All Cafes List</h1>
         <div class="posts">
-          <article class="post-item" tabindex="0">
+
+          <!-- <article class="post-item" tabindex="0">
             <div class="post-item__card">
               <img class="post-item__thumbnail" src="https://dicoding-restaurant-api.el.r.appspot.com/images/medium/41"
                 alt="Bring Your Phone Cafe" tabindex="0" />
@@ -120,238 +124,13 @@
                 nulla ut metus varius laoreet.
               </p>
             </div>
-          </article>
+          </article> -->
 
-          <article class="post-item" tabindex="0">
-            <div class="post-item__card">
-              <img class="post-item__thumbnail" src="https://dicoding-restaurant-api.el.r.appspot.com/images/medium/29"
-                alt="Pangsit Express" tabindex="0" />
-              <div class="post-item__location">
-                <h2 tabindex="0">Ternate</h2>
-              </div>
-            </div>
-            <div class="post-item__content">
-              <div class="post-item__title-rating">
-                <h1 class="post-item__title">
-                  <a href="#">Pangsit Express</a>
-                </h1>
-                <p class="post-item__rating" tabindex="0">Rating: 4.8</p>
-              </div>
-              <p class="post-item__description" tabindex="0">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                natoque penatibus et magnis dis parturient montes, nascetur
-                ridiculus mus. Donec quam felis, ultricies nec, pellentesque
-                eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
-                pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-                In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
-                justo. Nullam dictum felis eu pede mollis pretium. Integer
-                tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean
-                vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
-                consequat vitae, eleifend ac, enim. Aliquam lorem ante,
-                dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
-                nulla ut metus varius laoreet.
-              </p>
-            </div>
-          </article>
-
-          <article class="post-item" tabindex="0">
-            <div class="post-item__card">
-              <img class="post-item__thumbnail" src="https://dicoding-restaurant-api.el.r.appspot.com/images/medium/38"
-                alt="Ducky Duck" tabindex="0" />
-              <div class="post-item__location">
-                <h2 tabindex="0">Malang</h2>
-              </div>
-            </div>
-            <div class="post-item__content">
-              <div class="post-item__title-rating">
-                <h1 class="post-item__title">
-                  <a href="#">Ducky Duck</a>
-                </h1>
-                <p class="post-item__rating" tabindex="0">Rating: 4.7</p>
-              </div>
-              <p class="post-item__description" tabindex="0">
-                But I must explain to you how all this mistaken idea of
-                denouncing pleasure and praising pain was born and I will give
-                you a complete account of the system, and expound the actual
-                teachings of the great explorer of the truth, the
-                master-builder of human happiness. No one rejects, dislikes,
-                or avoids pleasure itself, because it is pleasure, but because
-                those who do not know how to pursue pleasure rationally
-                encounter consequences that are extremely painful. Nor again
-                is there anyone who loves or pursues or desires to obtain pain
-                of itself, because it is pain, but because occasionally
-                circumstances occur in which toil and pain can procure him
-                some great pleasure.
-              </p>
-            </div>
-          </article>
-
-          <article class="post-item" tabindex="0">
-            <div class="post-item__card">
-              <img class="post-item__thumbnail" src="https://dicoding-restaurant-api.el.r.appspot.com/images/medium/40"
-                alt="Kafein" tabindex="0" />
-              <div class="post-item__location">
-                <h2 tabindex="0">Bali</h2>
-              </div>
-            </div>
-            <div class="post-item__content">
-              <div class="post-item__title-rating">
-                <h1 class="post-item__title">
-                  <a href="#">Kafein</a>
-                </h1>
-                <p class="post-item__rating" tabindex="0">Rating: 3.8</p>
-              </div>
-              <p class="post-item__description" tabindex="0">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                natoque penatibus et magnis dis parturient montes, nascetur
-                ridiculus mus. Donec quam felis, ultricies nec, pellentesque
-                eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
-                pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-                In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
-                justo. Nullam dictum felis eu pede mollis pretium. Integer
-                tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean
-                vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
-                consequat vitae, eleifend ac, enim. Aliquam lorem ante,
-                dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
-                nulla ut metus varius laoreet.
-              </p>
-            </div>
-          </article>
-
-          <article class="post-item" tabindex="0">
-            <div class="post-item__card">
-              <img class="post-item__thumbnail" src="https://dicoding-restaurant-api.el.r.appspot.com/images/medium/08"
-                alt="Makan mudah" tabindex="0" />
-              <div class="post-item__location">
-                <h2 tabindex="0">Malang</h2>
-              </div>
-            </div>
-            <div class="post-item__content">
-              <div class="post-item__title-rating">
-                <h1 class="post-item__title">
-                  <a href="#">Makan mudah</a>
-                </h1>
-                <p class="post-item__rating" tabindex="0">Rating: 4.6</p>
-              </div>
-              <p class="post-item__description" tabindex="0">
-                But I must explain to you how all this mistaken idea of
-                denouncing pleasure and praising pain was born and I will give
-                you a complete account of the system, and expound the actual
-                teachings of the great explorer of the truth, the
-                master-builder of human happiness. No one rejects, dislikes,
-                or avoids pleasure itself, because it is pleasure, but because
-                those who do not know how to pursue pleasure rationally
-                encounter consequences that are extremely painful. Nor again
-                is there anyone who loves or pursues or desires to obtain pain
-                of itself, because it is pain, but because occasionally
-                circumstances occur in which toil and pain can procure him
-                some great pleasure.
-              </p>
-            </div>
-          </article>
-
-          <article class="post-item" tabindex="0">
-            <div class="post-item__card">
-              <img class="post-item__thumbnail" src="https://dicoding-restaurant-api.el.r.appspot.com/images/medium/32"
-                alt="Saya Suka" tabindex="0" />
-              <div class="post-item__location">
-                <h2 tabindex="0">Surabaya</h2>
-              </div>
-            </div>
-            <div class="post-item__content">
-              <div class="post-item__title-rating">
-                <h1 class="post-item__title">
-                  <a href="#">Saya Suka</a>
-                </h1>
-                <p class="post-item__rating" tabindex="0">Rating: 3.6</p>
-              </div>
-              <p class="post-item__description" tabindex="0">
-                But I must explain to you how all this mistaken idea of
-                denouncing pleasure and praising pain was born and I will give
-                you a complete account of the system, and expound the actual
-                teachings of the great explorer of the truth, the
-                master-builder of human happiness. No one rejects, dislikes,
-                or avoids pleasure itself, because it is pleasure, but because
-                those who do not know how to pursue pleasure rationally
-                encounter consequences that are extremely painful. Nor again
-                is there anyone who loves or pursues or desires to obtain pain
-                of itself, because it is pain, but because occasionally
-                circumstances occur in which toil and pain can procure him
-                some great pleasure.
-              </p>
-            </div>
-          </article>
-
-          <article class="post-item" tabindex="0">
-            <div class="post-item__card">
-              <img class="post-item__thumbnail" src="https://dicoding-restaurant-api.el.r.appspot.com/images/medium/45"
-                alt="Gigitan Cepat" tabindex="0" />
-              <div class="post-item__location">
-                <h2 tabindex="0">Aceh</h2>
-              </div>
-            </div>
-            <div class="post-item__content">
-              <div class="post-item__title-rating">
-                <h1 class="post-item__title">
-                  <a href="#">Gigitan Cepat</a>
-                </h1>
-                <p class="post-item__rating" tabindex="0">Rating: 4</p>
-              </div>
-              <p class="post-item__description" tabindex="0">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                natoque penatibus et magnis dis parturient montes, nascetur
-                ridiculus mus. Donec quam felis, ultricies nec, pellentesque
-                eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
-                pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-                In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
-                justo. Nullam dictum felis eu pede mollis pretium. Integer
-                tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean
-                vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
-                consequat vitae, eleifend ac, enim. Aliquam lorem ante,
-                dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
-                nulla ut metus varius laoreet.
-              </p>
-            </div>
-          </article>
-
-          <article class="post-item" tabindex="0">
-            <div class="post-item__card">
-              <img class="post-item__thumbnail" src="https://dicoding-restaurant-api.el.r.appspot.com/images/medium/04"
-                alt="Fairy Cafe" tabindex="0" />
-              <div class="post-item__location">
-                <h2 tabindex="0">Malang</h2>
-              </div>
-            </div>
-            <div class="post-item__content">
-              <div class="post-item__title-rating">
-                <h1 class="post-item__title">
-                  <a href="#">Fairy Cafe</a>
-                </h1>
-                <p class="post-item__rating" tabindex="0">Rating: 3.9</p>
-              </div>
-              <p class="post-item__description" tabindex="0">
-                But I must explain to you how all this mistaken idea of
-                denouncing pleasure and praising pain was born and I will give
-                you a complete account of the system, and expound the actual
-                teachings of the great explorer of the truth, the
-                master-builder of human happiness. No one rejects, dislikes,
-                or avoids pleasure itself, because it is pleasure, but because
-                those who do not know how to pursue pleasure rationally
-                encounter consequences that are extremely painful. Nor again
-                is there anyone who loves or pursues or desires to obtain pain
-                of itself, because it is pain, but because occasionally
-                circumstances occur in which toil and pain can procure him
-                some great pleasure.
-              </p>
-            </div>
-          </article>
         </div>
       </div>
-    </section> -->
+    </section>
   </main>
+
   <footer>
     <p tabindex="0">Copyright &copy; 2021 | Cafepedia |</p>
     <p tabindex="0">Created by Rakasiwi Surya</p>
