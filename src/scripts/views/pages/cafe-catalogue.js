@@ -1,17 +1,24 @@
 import TheCafeDbSource from '../../data/thecafedb-source';
+import { createCafeItemTemplate } from '../templates/template-creator';
 
 const CafeCatalogue = {
   async render() {
     return `
-      <h2>Cafe Catalogue Page</h2>
+      <div class="content">
+        <h2 class="content__heading">Available Cafes</h2>
+        <div id="cafes" class="cafes">
+
+        </div>
+      </div>
     `;
   },
 
   async afterRender() {
     const cafes = await TheCafeDbSource.Home();
-    console.log(cafes);
-
-    // TODO: tampilkan movies di dalam DOM
+    const cafesContainer = document.querySelector('#cafes');
+    cafes.forEach((cafe) => {
+      cafesContainer.innerHTML += createCafeItemTemplate(cafe);
+    });
   },
 };
 
