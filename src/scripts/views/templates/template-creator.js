@@ -18,7 +18,7 @@ const createCafeDetailTemplate = (cafe) => {
     cafeDrinks += drink.name;
   });
 
-  restaurant.customerReviews.forEach((review) => {
+  cafe.customerReviews.forEach((review) => {
     cafeReviews += `
     <div class="post-item">
       <div tabindex="0" class="post-item__content">
@@ -30,61 +30,62 @@ const createCafeDetailTemplate = (cafe) => {
     </div>`;
   });
 
-  return '';
-
-  // return `
-  // <div class="header__img">
-  //     <img tabindex="0" src="${CONFIG.IMG_MED + cafe.pictureId}" alt="${cafe.name}" crossorigin="anonymous">
-  //     <div class="favorite"></div>
-  //     <div class="post-item-title-rating-single">
-  //         <p class="post-item-rating">
-  //           <span> ${cafe.rating} </span>
-  //         </p>
-  //     </div>
-  // </div>
-  // <div class="posts-single-content">
-  //   <article tabindex="0" class="post-item">
-  //       <div class="post-item-content">
-  //           <p class="post-item-description">
-  //               <span tabindex="0"> ${cafeCategories} </span>
-  //               <br>
-  //               <span tabindex="0"> ${cafe.address}, ${cafe.city} </span>
-  //               <br>
-  //               <b tabindex="0">Description : </b>
-  //               <br>
-  //               <span tabindex="0"> ${cafe.description} </span>
-  //           </p>
-  //       </div>
-  //   </article>
-  //   <div class="posts-menu">
-  //       <article class="post-item">
-  //           <div class="post-item-content">
-  //               <div class="post-item-content-title">
-  //                   <h2 tabindex="0">Foods</h2>
-  //               </div>
-  //               <p tabindex="0" class="post-item-description">
-  //                   ${cafeFoods}
-  //               </p>
-  //           </div>
-  //       </article>
-  //       <article class="post-item">
-  //           <div class="post-item-content">
-  //               <div class="post-item-content-title">
-  //                   <h2 tabindex="0">Drinks</h2>
-  //               </div>
-  //               <p tabindex="0" class="post-item-description">
-  //                   ${cafeDrinks}
-  //               </p>
-  //           </div>
-  //       </article>
-  //   </div>
-  // </div>
-  // <div class="posts-review">
-  //     <div class="post-user-review">
-  //         ${cafeReviews}
-  //     </div>
-  // </div>
-  // `;
+  return `
+  <div class="single__img">
+    <img tabindex="0" src="${CONFIG.IMG_MED + cafe.pictureId}" alt="${cafe.name}" crossorigin="anonymous">
+    <div class="like"></div>
+  </div>
+  <div class="single__content">
+    <article tabindex="0" class="post-item">
+        <div class="post-item__content">
+            <p class="post-item__description">
+                <b tabindex="0">Categories : </b>
+                <br>
+                <span tabindex="0"> ${cafeCategories} </span>
+                <br>
+                <b tabindex="0">Categories : </b>
+                <br>
+                <span tabindex="0"> ${cafe.rating} </span>
+                <br>
+                <b tabindex="0">Address : </b>
+                <br>
+                <span tabindex="0"> ${cafe.address}, ${cafe.city} </span>
+                <br>
+                <b tabindex="0">Description : </b>
+                <br>
+                <span tabindex="0"> ${cafe.description} </span>
+            </p>
+        </div>
+    </article>
+    <div class="single__menu">
+        <article class="post-item">
+            <div class="post-item__content">
+                <div class="post-item__content-title">
+                    <h2 tabindex="0">Foods</h2>
+                </div>
+                <p tabindex="0" class="post-item__description">
+                    ${cafeFoods}
+                </p>
+            </div>
+        </article>
+        <article class="post-item">
+            <div class="post-item__content">
+                <div class="post-item__content-title">
+                    <h2 tabindex="0">Drinks</h2>
+                </div>
+                <p tabindex="0" class="post-item__description">
+                    ${cafeDrinks}
+                </p>
+            </div>
+        </article>
+    </div>
+  </div>
+  <div class="single__review">
+      <div class="single__user-review">
+          ${cafeReviews}
+      </div>
+  </div>
+  `;
 };
 
 const createCafeItemTemplate = (cafe) => `
@@ -101,7 +102,7 @@ const createCafeItemTemplate = (cafe) => `
                   <a href="${`/#/detail/${cafe.id}`}"> ${cafe.name} </a>
                 </h3>
                 <p class="post-item__rating">
-                  <span> ${cafe.rating} </span>
+                  <span><i class="fa fa-star"></i> ${cafe.rating} </span>
                 </p>
             </div>
             <p tabindex="0" class="post-item__description">${cafe.description.substr(0, 200)}..</p>

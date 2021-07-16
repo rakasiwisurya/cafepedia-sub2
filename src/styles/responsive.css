@@ -109,6 +109,25 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
+
+  .single__content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: .7rem;
+    grid-row-gap: 1rem;
+  }
+
+  .single__menu {
+    grid-template-columns: 1fr 1fr;
+    height: fit-content;
+  }
+
+  .single__menu,
+  .single__review {
+    display: grid;
+    grid-column-gap: .7rem;
+    grid-row-gap: 1rem;
+  }
 }
 
 @media screen and (min-width: 1200px) {

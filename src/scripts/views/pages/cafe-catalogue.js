@@ -4,18 +4,20 @@ import { createCafeItemTemplate } from '../templates/template-creator';
 const CafeCatalogue = {
   async render() {
     return `
-      <div class="content">
-        <h2 class="content__heading">Available Cafes</h2>
-        <div id="cafes" class="cafes">
-
+    <section class="content">
+      <div class="latest">
+        <h1 class="latest__label" tabindex="0">All Cafes List</h1>
+        <div id="cafeList" class="posts">
+        
         </div>
       </div>
+    </section>
     `;
   },
 
   async afterRender() {
     const cafes = await TheCafeDbSource.Home();
-    const cafesContainer = document.querySelector('#cafes');
+    const cafesContainer = document.querySelector('#cafeList');
     cafes.forEach((cafe) => {
       cafesContainer.innerHTML += createCafeItemTemplate(cafe);
     });

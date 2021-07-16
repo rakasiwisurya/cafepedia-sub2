@@ -325,8 +325,9 @@ footer {
 }
 
 /*
-   Like
-*/
+ * like
+ */
+
 .like {
     font-size: 18px;
     position: fixed;
@@ -342,4 +343,39 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/*
+ * single
+ */
+
+.single__img {
+    width: 100%;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.single__img img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: .75rem;
+    height: 380px;
+    max-height: 380px;
+}
+
+.single__menu .post-item__content-title {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.single__review,
+.single__content {
+    margin: 2rem auto;
+    text-align: left;
+}
+
+.single__user-review {
+    display: flex;
+    flex-direction: column;
 }

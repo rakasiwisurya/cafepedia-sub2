@@ -4,21 +4,32 @@ import { createCafeItemTemplate } from '../templates/template-creator';
 const Favorite = {
   async render() {
     return `
-      <div class="content">
-        <h2 class="content__heading">Your Liked Cafe</h2>
-        <div id="cafes" class="cafes">
-  
+      <section class="content">
+        <div class="latest">
+          <h1 class="latest__label" tabindex="0">Your Liked Cafe(s)</h1>
+          <div id="favCafeList" class="posts">
+          
+          </div>
         </div>
-      </div>
+      </section>
     `;
   },
 
   async afterRender() {
-    const cafes = await FavoriteCafeIdb.getAllMovies();
-    const cafesContainer = document.querySelector('#cafes');
-    cafes.forEach((cafe) => {
-      cafesContainer.innerHTML += createCafeItemTemplate(cafe);
-    });
+    const title = document.querySelector('.latest__label');
+    const cafesContainer = document.querySelector('#favCafeList');
+    title.innerHTML = '<p>Loading</p>';
+
+    try {
+      const cafes = await FavoriteCafeIdb.getAllCafes();
+      title.innerHTML = 'Favorite Cafes';
+
+      cafes.forEach((cafe) => {
+        cafesContainer.innerHTML += createCafeItemTemplate(cafe);
+      });
+    } catch (error) {
+      title.innerHTML = '<p>Connection Error</p>';
+    }
   },
 };
 
