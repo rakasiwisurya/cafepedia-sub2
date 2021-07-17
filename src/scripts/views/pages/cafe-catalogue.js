@@ -4,14 +4,14 @@ import { createCafeItemTemplate } from '../templates/template-creator';
 const CafeCatalogue = {
   async render() {
     return `
-    <section class="content">
-      <div class="latest">
-        <h1 class="latest__label" tabindex="0">All Cafes List</h1>
-        <div id="cafeList" class="posts">
-        
+      <section class="content">
+        <div class="latest">
+          <h1 class="latest__label" tabindex="0">All Cafes List</h1>
+          <div id="cafeList" class="posts">
+          
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     `;
   },
 

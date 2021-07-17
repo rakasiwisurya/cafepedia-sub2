@@ -22,10 +22,10 @@ const Detail = {
     cafeName.innerHTML = '<p>Loading</p>';
 
     try {
-      const cafe = await TheCafeDbSource.detailCafe(url.id);
+      const cafe = await TheCafeDbSource.Detail(url.id);
       if (cafe !== null) {
         singleContainer.innerHTML = createCafeDetailTemplate(cafe);
-        cafeName.innerHTML = restaurant.name;
+        cafeName.innerHTML = cafe.name;
       } else {
         cafeName.innerHTML = '<p>Not Found</p>';
       }

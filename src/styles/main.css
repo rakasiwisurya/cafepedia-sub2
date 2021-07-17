@@ -364,7 +364,8 @@ footer {
     max-height: 380px;
 }
 
-.single__menu .post-item__content-title {
+.single__menu .post-item__content-title,
+.single__content-title {
     text-align: center;
     margin: 1rem 0;
 }

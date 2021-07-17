@@ -23,7 +23,8 @@ const createCafeDetailTemplate = (cafe) => {
     <div class="post-item">
       <div tabindex="0" class="post-item__content">
         <div>
-          <h3 tabindex="0"> ${review.name} <span tabindex="0"> ${review.date} </span></h3>
+          <h3 tabindex="0"> ${review.name}</h3>
+          <h6 tabindex="0"> ${review.date}</h6>
           <p tabindex="0">${review.review}</p>
         </div>
       </div>
@@ -42,15 +43,15 @@ const createCafeDetailTemplate = (cafe) => {
                 <b tabindex="0">Categories : </b>
                 <br>
                 <span tabindex="0"> ${cafeCategories} </span>
-                <br>
-                <b tabindex="0">Categories : </b>
+                <br><br>
+                <b tabindex="0">Rating : </b>
                 <br>
                 <span tabindex="0"> ${cafe.rating} </span>
-                <br>
+                <br><br>
                 <b tabindex="0">Address : </b>
                 <br>
                 <span tabindex="0"> ${cafe.address}, ${cafe.city} </span>
-                <br>
+                <br><br>
                 <b tabindex="0">Description : </b>
                 <br>
                 <span tabindex="0"> ${cafe.description} </span>
@@ -81,9 +82,12 @@ const createCafeDetailTemplate = (cafe) => {
     </div>
   </div>
   <div class="single__review">
-      <div class="single__user-review">
-          ${cafeReviews}
-      </div>
+    <div class="single__content-title">
+      <h2 tabindex="0">Feedback</h2>
+    </div>
+    <div class="single__user-review">
+        ${cafeReviews}
+    </div>
   </div>
   `;
 };
@@ -101,9 +105,7 @@ const createCafeItemTemplate = (cafe) => `
                 <h3 class="post-item__title">
                   <a href="${`/#/detail/${cafe.id}`}"> ${cafe.name} </a>
                 </h3>
-                <p class="post-item__rating">
-                  <span><i class="fa fa-star"></i> ${cafe.rating} </span>
-                </p>
+                <p class="post-item__rating">⭐️<span> ${cafe.rating} </span></p>
             </div>
             <p tabindex="0" class="post-item__description">${cafe.description.substr(0, 200)}..</p>
         </div>
@@ -111,14 +113,14 @@ const createCafeItemTemplate = (cafe) => `
   `;
 
 const createLikeButtonTemplate = () => `
-  <button aria-label="like this cafe">
+  <button aria-label="like this cafe" class="like">
     <i class="fa fa-heart-o" aria-hidden="true"></i>
   </button>
 `;
 
 const createLikedButtonTemplate = () => `
-  <button aria-label="like this cafe">
-    <i class="fas fa-heart" aria-hidden="true"></i>
+  <button aria-label="like this cafe" class="like">
+    <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
 `;
 
